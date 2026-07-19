@@ -1,0 +1,121 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<BottomNav>:
+
+
+    size_hint:
+        .9, None
+
+
+    height:
+        dp(70)
+
+
+    pos_hint:
+        {
+        "center_x":0.5,
+        "y":0.03
+        }
+
+
+    padding:
+        dp(10)
+
+
+    spacing:
+        dp(20)
+
+
+    radius:
+        [dp(25),dp(25),dp(25),dp(25)]
+
+
+    md_bg_color:
+
+        .05,.08,.15,.95
+
+
+
+    MDIconButton:
+
+
+        icon:
+            "home"
+
+
+        theme_icon_color:
+            "Custom"
+
+
+        icon_color:
+            .2,.6,1,1
+
+
+        on_release:
+
+            app.root.current = "home"
+
+
+
+    MDIconButton:
+
+
+        icon:
+            "folder"
+
+
+        theme_icon_color:
+            "Custom"
+
+
+        icon_color:
+            .8,.8,1,1
+
+
+        on_release:
+
+            app.open_files()
+
+
+
+    MDIconButton:
+
+
+        icon:
+            "swap-horizontal"
+
+
+        theme_icon_color:
+            "Custom"
+
+
+        icon_color:
+            .8,.8,1,1
+
+
+        on_release:
+
+            app.open_transfers()
+
+
+
+    MDIconButton:
+
+
+        icon:
+            "account-circle"
+
+
+        theme_icon_color:
+            "Custom"
+
+
+        icon_color:
+            .8,.8,1,1
+
+
+        on_release:
+
+            app.open_profile()

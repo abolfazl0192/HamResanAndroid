@@ -1,0 +1,57 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+<HistorySection>:
+
+    size_hint_x: 1
+
+    size_hint_y: None
+    height: dp(220)
+
+    orientation: "vertical"
+
+    padding: dp(16)
+    spacing: dp(12)
+
+    radius: [22, 22, 22, 22]
+
+    md_bg_color: "#0F1827"
+
+    elevation: 0
+
+    MDBoxLayout:
+
+        size_hint_y: None
+        height: dp(28)
+
+        orientation: "horizontal"
+
+        PersianLabel:
+
+            fa_text: "مشاهده همه"
+
+            font_name: "Vazir"
+            font_size: sp(14)
+
+            halign: "left"
+
+            theme_text_color: "Custom"
+            text_color: "#4F8DFD"
+
+        Widget:
+
+        PersianLabel:
+
+            fa_text: "آخرین انتقال‌ها"
+
+            font_name: "Vazir"
+            font_size: sp(18)
+
+            bold: True
+
+            halign: "right"
+
+            theme_text_color: "Custom"
+            text_color: "white"
+
+    Widget:

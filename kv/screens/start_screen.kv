@@ -1,0 +1,113 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<StartScreen>:
+
+
+    MDBoxLayout:
+
+        orientation: "vertical"
+
+        padding: dp(30)
+
+        spacing: dp(20)
+
+
+
+        Widget:
+
+
+
+        Image:
+
+            source: "assets/images/app_icon.png"
+
+            size_hint_y: None
+
+            height: dp(100)
+
+            allow_stretch: True
+
+            keep_ratio: True
+
+
+
+        PersianLabel:
+
+            fa_text: "به همرسان خوش آمدید"
+
+            font_name: "Vazir"
+
+            font_size: sp(24)
+
+            bold: True
+
+            size_hint_y: None
+
+            height: dp(40)
+
+            halign: "center"
+
+            valign: "middle"
+
+            text_size: self.size
+
+            theme_text_color: "Custom"
+
+            text_color: 1,1,1,1
+
+
+
+        PersianLabel:
+
+            fa_text: "نام دستگاه خود را وارد کنید"
+
+            font_name: "Vazir"
+
+            font_size: sp(14)
+
+            size_hint_y: None
+
+            height: dp(30)
+
+            halign: "center"
+
+            valign: "middle"
+
+            text_size: self.size
+
+            theme_text_color: "Custom"
+
+            text_color: .7,.7,.7,1
+
+
+
+        MDTextField:
+
+            id: device_name
+
+            hint_text: "مثلاً Amir-PC"
+
+            mode: "rectangle"
+
+            size_hint_x: 1
+
+
+
+        MDRaisedButton:
+
+            text: "شروع"
+
+            size_hint_x: None
+
+            width: dp(120)
+
+            pos_hint:
+                {"center_x": 0.5}
+
+            on_release: root.save_device(device_name.text)
+
+
+
+        Widget:

@@ -1,0 +1,63 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<ProfileCard>:
+
+
+    size_hint_x: 1
+
+    size_hint_y: None
+
+    height: dp(60)
+
+
+    radius:
+        [dp(18),dp(18),dp(18),dp(18)]
+
+
+    md_bg_color:
+        .15,.32,.65,.8
+
+
+
+    MDLabel:
+
+
+        id: name_label
+
+
+        text:
+            root.device_name
+
+
+        font_name:
+            "Vazir"
+
+
+        font_size:
+            sp(20)
+
+
+        bold:
+            True
+
+
+        halign:
+            "center"
+
+
+        valign:
+            "middle"
+
+
+        text_size:
+            self.size
+
+
+        theme_text_color:
+            "Custom"
+
+
+        text_color:
+            1,1,1,1

@@ -1,0 +1,179 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<DevicesSection>:
+
+
+    size_hint_x: 1
+
+    size_hint_y: None
+
+    height: dp(220)
+
+
+    orientation: "vertical"
+
+
+    padding: dp(16)
+
+    spacing: dp(12)
+
+
+    radius: [22,22,22,22]
+
+
+    md_bg_color: "#0F1827"
+
+
+    elevation: 0
+
+
+
+
+    MDBoxLayout:
+
+
+        size_hint_y: None
+
+        height: dp(28)
+
+
+        orientation: "horizontal"
+
+
+
+
+        PersianLabel:
+
+
+            fa_text:
+                "مشاهده همه"
+
+
+            font_name:
+                "Vazir"
+
+
+            font_size:
+                sp(14)
+
+
+            bold:
+                False
+
+
+            halign:
+                "left"
+
+
+            valign:
+                "middle"
+
+
+            text_size:
+                self.size
+
+
+            theme_text_color:
+                "Custom"
+
+
+            text_color:
+                "#2ed2a9"
+
+
+
+
+        Widget:
+
+
+
+
+        PersianLabel:
+
+
+            id: loading_text
+
+
+            fa_text:
+                "دستگاه‌های پیدا شده"
+
+
+            font_name:
+                "Vazir"
+
+
+            font_size:
+                sp(18)
+
+
+            bold:
+                True
+
+
+            halign:
+                "right"
+
+
+            valign:
+                "middle"
+
+
+            text_size:
+                self.size
+
+
+            theme_text_color:
+                "Custom"
+
+
+            text_color:
+                "white"
+
+
+
+
+
+
+
+
+    # محل قرار گرفتن دستگاه‌های اسکن شده
+
+
+    ScrollView:
+
+
+        do_scroll_x:
+            False
+
+
+        do_scroll_y:
+            True
+
+
+        size_hint_y:
+            1
+
+
+
+
+        MDBoxLayout:
+
+            id: devices_list
+
+
+            orientation:
+                "vertical"
+
+
+            size_hint_y:
+                None
+
+
+            height:
+                self.minimum_height
+
+
+            spacing:
+                dp(10)

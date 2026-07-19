@@ -1,0 +1,252 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<ActionButtons>:
+
+    size_hint_x: 1
+    orientation: "horizontal"
+    size_hint_y: None
+    height: dp(95)
+    spacing: dp(10)
+
+
+
+    MDCard:
+
+        on_release:
+            root.send_file()
+
+        size_hint_x: 1
+        size_hint_y: 1
+
+        radius: [dp(18),dp(18),dp(18),dp(18)]
+
+        elevation: 0
+
+        ripple_behavior: True
+
+
+        FloatLayout:
+
+
+            Image:
+
+                source: "assets/cards/blue_card_tile.png"
+
+                size_hint: 1,1
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.5}
+
+                allow_stretch: True
+
+                keep_ratio: False
+
+
+
+            Image:
+
+                source: "assets/icons/upload.png"
+
+                size_hint: None,None
+
+                size: dp(38),dp(38)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.65}
+
+                allow_stretch: True
+
+                keep_ratio: True
+
+
+
+            PersianLabel:
+
+                fa_text: "ارسال"
+
+                en_text: "Send"
+
+                font_name: "Vazir"
+
+                font_size: sp(14)
+
+                size_hint: 1,None
+
+                height: dp(25)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.25}
+
+                halign: "center"
+
+                valign: "middle"
+
+                text_size: self.size
+
+                theme_text_color: "Custom"
+
+                text_color: 1,1,1,1
+
+
+
+
+    MDCard:
+
+        on_release:
+            root.receive_file()
+
+        size_hint_x: 1
+
+        size_hint_y: 1
+
+        radius: [dp(18),dp(18),dp(18),dp(18)]
+
+        elevation: 0
+
+        ripple_behavior: True
+
+
+        FloatLayout:
+
+
+            Image:
+
+                source: "assets/cards/green_card_tile.png"
+
+                size_hint: 1,1
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.5}
+
+                allow_stretch: True
+
+                keep_ratio: False
+
+
+
+            Image:
+
+                source: "assets/icons/download.png"
+
+                size_hint: None,None
+
+                size: dp(38),dp(38)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.65}
+
+                allow_stretch: True
+
+                keep_ratio: True
+
+
+
+            PersianLabel:
+
+                fa_text: "دریافت"
+
+                en_text: "Receive"
+
+                font_name: "Vazir"
+
+                font_size: sp(14)
+
+                size_hint: 1,None
+
+                height: dp(25)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.25}
+
+                halign: "center"
+
+                valign: "middle"
+
+                text_size: self.size
+
+                theme_text_color: "Custom"
+
+                text_color: 1,1,1,1
+
+
+
+
+    MDCard:
+
+        on_release:
+            root.scan_network()
+
+        size_hint_x: 1
+
+        size_hint_y: 1
+
+        radius: [dp(18),dp(18),dp(18),dp(18)]
+
+        elevation: 0
+
+        ripple_behavior: True
+
+
+        FloatLayout:
+
+
+            Image:
+
+                source: "assets/cards/purple_card_tile.png"
+
+                size_hint: 1,1
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.5}
+
+                allow_stretch: True
+
+                keep_ratio: False
+
+
+
+            Image:
+
+                source: "assets/icons/qrcode.png"
+
+                size_hint: None,None
+
+                size: dp(38),dp(38)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.65}
+
+                allow_stretch: True
+
+                keep_ratio: True
+
+
+
+            PersianLabel:
+
+                fa_text: "اسکن"
+
+                en_text: "Scan"
+
+                font_name: "Vazir"
+
+                font_size: sp(14)
+
+                size_hint: 1,None
+
+                height: dp(25)
+
+                pos_hint:
+                    {"center_x":0.5,"center_y":0.25}
+
+                halign: "center"
+
+                valign: "middle"
+
+                text_size: self.size
+
+                theme_text_color: "Custom"
+
+                text_color: 1,1,1,1

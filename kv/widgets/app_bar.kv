@@ -1,0 +1,73 @@
+<AppBar>:
+
+    size_hint_y: None
+    height: dp(80)
+
+    orientation: "horizontal"
+
+    padding: dp(8)
+    spacing: dp(12)
+
+
+    Image:
+
+        source: "assets/images/app_icon.png"
+
+        size_hint: None,None
+        size: dp(48),dp(48)
+
+        allow_stretch: True
+        keep_ratio: True
+
+
+
+    MDBoxLayout:
+
+        orientation: "vertical"
+
+        spacing: dp(2)
+
+
+        PersianLabel:
+
+            fa_text: "همرسان"
+
+            font_name: "Vazir"
+            font_size: sp(22)
+
+            bold: True
+
+            halign: "center"
+
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+
+
+
+        PersianLabel:
+
+            fa_text: "انتقال فایل در شبکه محلی"
+
+            font_name: "Vazir"
+            font_size: sp(12)
+
+            halign: "center"
+
+            theme_text_color: "Custom"
+            text_color: .7,.7,.7,1
+
+
+
+    Widget:
+
+
+
+    MDIconButton:
+
+        icon: "cog-outline"
+
+        icon_size: "28sp"
+
+        theme_icon_color: "Custom"
+
+        icon_color: 1,1,1,1

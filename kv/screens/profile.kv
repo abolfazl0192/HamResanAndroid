@@ -1,0 +1,76 @@
+#:import dp kivy.metrics.dp
+#:import sp kivy.metrics.sp
+
+
+<ProfileScreen>:
+
+
+    MDBoxLayout:
+
+        orientation: "vertical"
+
+        padding: dp(30)
+
+        spacing: dp(20)
+
+
+
+        Widget:
+
+
+
+        PersianLabel:
+
+            fa_text: "پروفایل دستگاه"
+
+            font_name: "Vazir"
+
+            font_size: sp(24)
+
+            bold: True
+
+            size_hint_y: None
+
+            height: dp(50)
+
+            halign: "center"
+
+            valign: "middle"
+
+            text_size: self.size
+
+            theme_text_color: "Custom"
+
+            text_color: 1,1,1,1
+
+
+
+        MDTextField:
+
+            id: device_name
+
+            hint_text: "نام دستگاه"
+
+            mode: "rectangle"
+
+            size_hint_x: 1
+
+
+
+        MDRaisedButton:
+
+            text: "ذخیره"
+
+            size_hint_x: None
+
+            width: dp(120)
+
+            pos_hint:
+                {"center_x":0.5}
+
+            on_release:
+                root.save_profile(device_name.text)
+
+
+
+        Widget:
