@@ -126,10 +126,10 @@ android.ndk = 25b
 #android.ndk_api = 21
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = /home/amir/Android/Sdk/android-ndk-r25b
+
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
-android.sdk_path = /home/amir/Android/Sdk
+
 
 # (str) ANT directory (if empty, it will be automatically downloaded.)
 #android.ant_path =
